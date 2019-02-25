@@ -5,6 +5,7 @@ RUN set -ex && \
     apt-get install -y \
             curl \
             dnsutils \
+            iftop \
             jq \
             net-tools \
             netcat \
