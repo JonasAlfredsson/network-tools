@@ -23,7 +23,7 @@ docker run -it --rm --network host jonasal/network-tools
     - nslookup
     - nsupdate
 - iftop
-- iptools2
+- iproute2
     - arpd
     - bridge
     - ctstat
