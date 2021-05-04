@@ -23,6 +23,24 @@ docker run -it --rm --network host jonasal/network-tools
     - nslookup
     - nsupdate
 - iftop
+- iptools2
+    - arpd
+    - bridge
+    - ctstat
+    - dcb
+    - devlink
+    - ip
+    - lnstat
+    - nstat
+    - rdma
+    - routef
+    - routel
+    - rtacct
+    - rtmon
+    - rtstat
+    - ss
+    - tc
+    - tipc
 - jq
 - net-tools
     - arp
