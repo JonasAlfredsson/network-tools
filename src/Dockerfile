@@ -6,6 +6,7 @@ RUN set -ex && \
             curl \
             dnsutils \
             iftop \
+            iproute2 \
             jq \
             net-tools \
             netcat \
