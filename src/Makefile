@@ -11,8 +11,10 @@ build: Makefile Dockerfile
 	$(DOCKER_BUILD) -t jonasal/network-tools .
 	@echo "Done!  Use docker run jonasal/network-tools to run"
 
-release:
-	$(DOCKER_BUILD) -t jonasal/network-tools --pull --no-cache .
+# These commands are primarily used for development, see link for more info:
+# https://github.com/JonasAlfredsson/docker-nginx-certbot/issues/28
+dev:
+	docker buildx build --platform linux/amd64,linux/386,linux/arm64,linux/arm/v7,linux/mips64le,linux/s390x,linux/ppc64le --tag jonasal/network-tools:dev .
 
 push:
-	docker push jonasal/network-tools
+	docker buildx build --platform linux/amd64,linux/386,linux/arm64,linux/arm/v7 --tag jonasal/network-tools:dev --pull --no-cache --push .
