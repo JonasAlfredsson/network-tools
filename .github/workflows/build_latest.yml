@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Perform setup steps
-        uses: JonasAlfredsson/ghac-checkout-buildx@main
+        uses: JonasAlfredsson/checkout-qemu-buildx@v1
         with:
           should_login: ${{ github.event_name != 'pull_request' }}
           username: ${{ secrets.DOCKERHUB_USERNAME }}
