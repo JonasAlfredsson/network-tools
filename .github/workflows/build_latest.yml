@@ -21,9 +21,6 @@ jobs:
   docker_buildx:
     runs-on: ubuntu-latest
     steps:
-      - name: Use tmpfs for Docker
-        uses: JonasAlfredsson/docker-on-tmpfs@main
-
       - name: Perform setup steps
         uses: JonasAlfredsson/checkout-qemu-buildx@v1
         with:
@@ -42,12 +39,3 @@ jobs:
             linux/arm/v7
           push: false
           tags: jonasal/network-tools:latest
-
-      - name: Get some more statistics
-        shell: bash
-        run: |
-          sudo free -h
-          echo
-          sudo swapon --show
-          sudo df -h
-          echo
