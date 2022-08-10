@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM debian:bullseye-slim
 
 RUN set -ex && \
     apt-get update && \
