@@ -6,6 +6,7 @@ RUN set -ex && \
             curl \
             dnsutils \
             iftop \
+            iputils-ping \
             iproute2 \
             jq \
             net-tools \
