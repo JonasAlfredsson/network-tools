@@ -22,6 +22,7 @@ docker run -it --rm --network host jonasal/network-tools
     - dig
     - nslookup
     - nsupdate
+- fping
 - iftop
 - iputils-ping
     - ping
