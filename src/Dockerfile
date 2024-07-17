@@ -1,4 +1,5 @@
 FROM debian:12.6-slim
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN set -ex && \
     apt-get update && \

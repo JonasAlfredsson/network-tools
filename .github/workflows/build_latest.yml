@@ -26,6 +26,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Extract version numbers from the Dockerfile
+        id: tagger
+        run: bash .github/version_extractor.sh Dockerfile >> $GITHUB_ENV
+
       - name: Build and push all images
         uses: docker/build-push-action@v3
         with:
@@ -35,5 +39,10 @@ jobs:
             linux/386
             linux/arm64
             linux/arm/v7
+          pull: true
+          no-cache: true
           push: ${{ github.event_name != 'pull_request' }}
-          tags: jonasal/network-tools:latest
+          tags: |
+            jonasal/network-tools:latest
+            jonasal/network-tools:${{ env.VERSION_MAJOR }}
+            jonasal/network-tools:${{ env.VERSION_MAJOR }}.${{ env.VERSION_MINOR }}
