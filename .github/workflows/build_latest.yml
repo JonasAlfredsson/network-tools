@@ -1,21 +1,19 @@
 name: "build-latest"
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - "main"
       - "master"
     paths:
-      - "src/**"
-      - ".github/workflows/**"
+      - "src/Dockerfile"
   pull_request:
     branches:
       - "main"
       - "master"
     paths:
       - "src/**"
-  schedule:
-    - cron: "0 6 1 * *"
 
 jobs:
   docker_buildx:
