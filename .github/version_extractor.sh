@@ -5,7 +5,7 @@ set -eo pipefail
 # defined in the Dockerfile so we can apply these as tags when building our own
 # container.
 
-if [ -f "${1}" ]; then
+if [ ! -f "${1}" ]; then
     >&2 echo "Input argument '${1}' is not a file"
     exit 1
 fi
