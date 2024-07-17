@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM debian:12.6-slim
 
 RUN set -ex && \
     apt-get update && \
@@ -11,7 +11,7 @@ RUN set -ex && \
             iproute2 \
             jq \
             net-tools \
-            netcat \
+            netcat-openbsd \
             nethogs \
             nmap \
             procps \

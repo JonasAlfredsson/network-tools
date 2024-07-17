@@ -52,7 +52,7 @@ docker run -it --rm --network host jonasal/network-tools
     - netstat
     - rarp
     - route
-- netcat
+- netcat-openbsd
 - nethogs
 - nmap
 - openssl
