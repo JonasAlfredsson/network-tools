@@ -28,7 +28,7 @@ jobs:
 
       - name: Extract version numbers from the Dockerfile
         id: tagger
-        run: bash .github/version_extractor.sh Dockerfile >> $GITHUB_ENV
+        run: bash .github/version_extractor.sh src/Dockerfile >> $GITHUB_ENV
 
       - name: Build and push all images
         uses: docker/build-push-action@v3
