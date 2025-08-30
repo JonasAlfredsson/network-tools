@@ -75,6 +75,7 @@ docker run -it --rm --network host jonasal/network-tools
     - w
     - watch
 - strace
+- telnet
 - tcpdump
 - traceroute
 - wget

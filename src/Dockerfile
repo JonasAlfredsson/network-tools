@@ -17,6 +17,7 @@ RUN set -ex && \
             nmap \
             procps \
             strace \
+            telnet \
             tcpdump \
             traceroute \
             wget \
