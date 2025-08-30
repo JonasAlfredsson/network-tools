@@ -74,6 +74,7 @@ docker run -it --rm --network host jonasal/network-tools
     - vmstat
     - w
     - watch
+- socat
 - strace
 - telnet
 - tcpdump

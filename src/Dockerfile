@@ -16,6 +16,7 @@ RUN set -ex && \
             nethogs \
             nmap \
             procps \
+            socat \
             strace \
             telnet \
             tcpdump \
