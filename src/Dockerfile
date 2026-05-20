@@ -1,4 +1,4 @@
-FROM debian:13.4-slim
+FROM debian:13.5-slim
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN set -ex && \
